@@ -67,29 +67,48 @@ The project is built with a **full-stack JavaScript** stack:
 ## 📂 Project Structure
 
 AddisNest/
+├── frontend/                   # Frontend (Vite + React + Tailwind)
+│   ├── public/                 # Static assets
+│   ├── src/                    
+│   │   ├── assets/             # Images, icons, fonts
+│   │   ├── components/         # Reusable UI components
+│   │   ├── pages/              # Page-level components (Home, Listings, Profile, Admin Dashboard, etc.)
+│   │   ├── layouts/            # Shared layouts (Navbar, Footer, Sidebar)
+│   │   ├── context/            # React Context API (Auth, Theme, etc.)
+│   │   ├── hooks/              # Custom hooks (useAuth, useFetch, etc.)
+│   │   ├── utils/              # Utility functions/helpers
+│   │   ├── services/           # API calls to backend
+│   │   ├── App.jsx             # Main React component
+│   │   ├── main.jsx            # Entry point for Vite
+│   │   └── index.css           # Tailwind & global styles
+│   ├── package.json
+│   └── vite.config.js
 │
-├── backend/ # Express.js + PostgreSQL API
-│ ├── src/
-│ │ ├── controllers/ # Route handlers
-│ │ ├── middleware/ # Auth & role-based guards
-│ │ ├── models/ # DB queries
-│ │ ├── routes/ # API routes
-│ │ ├── utils/ # Helpers
-│ │ └── server.js # App entry
-│ ├── .env.example # Backend environment variables
-│ └── package.json
+├── backend/                    # Backend (Node.js + Express + PostgreSQL)
+│   ├── src/
+│   │   ├── config/             # DB connection, environment configs
+│   │   ├── models/             # Sequelize/Prisma models for Postgres
+│   │   ├── routes/             # Express routes (auth, users, listings, bookings, admin, etc.)
+│   │   ├── controllers/        # Route controllers (business logic)
+│   │   ├── middlewares/        # Auth, validation, error handling
+│   │   ├── services/           # External services (email, payment, cloud storage)
+│   │   ├── utils/              # Helpers (JWT, password hashing, etc.)
+│   │   ├── app.js              # Express app setup
+│   │   └── server.js           # Entry point (start server)
+│   ├── package.json
+│   └── .env.example            # Example environment variables
 │
-├── frontend/ # Vite + React + Tailwind
-│ ├── src/
-│ │ ├── components/ # Reusable UI
-│ │ ├── pages/ # Pages (Home, Dashboard, Admin, etc.)
-│ │ ├── services/ # API calls
-│ │ └── main.jsx
-│ ├── tailwind.config.js
-│ └── package.json
+├── docs/                       # Documentation (design, API docs, DB schema)
+│   ├── api-reference.md
+│   ├── db-schema.png
+│   └── system-architecture.md
 │
-├── README.md
-
+├── scripts/                    # Deployment & automation scripts
+│
+├── .gitignore
+├── README.md                   # Project overview
+├── LICENSE
+└── package.json                # Root dependencies if using workspaces
 
 
 ---
