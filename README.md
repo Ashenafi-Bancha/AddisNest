@@ -65,7 +65,7 @@ The project is built with a **full-stack JavaScript** stack:
 ---
 
 ## 📂 Project Structure
-
+```
 AddisNest/
 ├── frontend/                   # Frontend (Vite + React + Tailwind)
 │   ├── public/                 # Static assets
@@ -110,7 +110,7 @@ AddisNest/
 ├── LICENSE
 └── package.json                # Root dependencies if using workspaces
 
-
+```
 ---
 
 ## ⚙️ Installation & Setup
